@@ -1,0 +1,65 @@
+## PROJETO N°1
+
+O primeiro projeto tem o objetivo avaliar o nível de domínio com a linguagem C++, as estratégias de resolução de problemas. 
+
+### Objetivo Final
+
+- Montar uma aplicação utilizando o Console para iteração com o usuário. Nesta aplicação o objetivo principal é mostrar as listas de equipamentos que existem hoje na Eletra.
+
+    - Funcionalidades no Menu
+        1) Exibir todas as linhas disponíveis
+        2) Exibir todos modelos de Medidores de Energia
+        3) Exibir todos os modelos da Linha Ares
+        4) Exibir todos os modelos da Linha Cronos
+        5) Exibir todos os modelos da Linha Zeus
+        6) Sair da Aplicação
+
+    - Requisitos
+        1) Utilizar classes
+        2) Organização dos arquivos (header/cpp)
+        3) Utilizar compilador via Terminal do Visual Studio
+
+## PROJETO N°2
+
+O objetivo deste projeto, além de otimizar tudo que foi feito no projeto anterior, é que o novo integrante conheça todas as tecnologias, alguns dos padrões de projetos que são utilizados no EletraSDK.
+
+### Objetivo Final
+
+- Montar uma aplicação utilizando gRPC para iteração com usuário. Esta aplicação tem a mesma ideia da anterior, mas conterá algumas novas funcionalidades. Essa aplicação deverá armazenar em uma única lista, todos os modelos de medidores existente, como também os novos que serão adicionados, atrelando cada um deles ao ID. Cada Linha específica deverá ser implementada em classes diferentes, a partir de uma interface pré-definida pelo programador.
+
+    - Funcionalidades do Menu
+        1. Exibir todas as linhas disponíveis
+        2. Exibir todos modelos de Medidores de Energia
+        3. Exibir todos os modelos da Linha Ares
+        4. Exibir todos os modelos da Linha Cronos
+        5. Exibir todos os modelos da Linha Zeus
+        6. Adicionar um novo modelo a uma linha específica
+        7. Remover o modelo informando o seu id
+        8. Sair da Aplicação
+
+    - Requisistos
+        1. Utilizar Interface para os medidores
+        2. Utilizar o Padrão de Projeto Factory para a criação dos novos modelos.
+        3. Utilizar alguma das estruturas de dados disponíveis (Lista, fila ou pilha)
+        4. Utilizar CMake
+
+
+## PROJETO 03
+
+Com esse projeto estaremos avançando mais um passo no conhecimento das tecnologias usadas no time SDK. Neste projeto, alem de aprofundar tudo que foi feito no projeto 2 e iremos implementar o uso do gRPC e vcpkg. Implementações importantes para o dia a dia dos membros do time do SDK. O objetivo do Projeto 3 é fazer um Servidor se comunicando com o BloomRPC e os métodos da aplicação serem exibidos lá. O servidor tem que disponibilizar os seguintes métodos:
+
+    - Funcionalidades do Menu
+    1. Exibir as linhas disponíveis
+    2. Exibir as linhas disponíveis na lista de medidores
+    3. Exibir todos os medidores disponíveis na lista baseado na linha escolhida pelo usuário
+    4. Exibir todos os modelos de meddidores na lista
+    5. Adiconar um novo medidor na lista de medidores
+    6. Excluir um medidor baseado no seu ID
+
+    - Reequisitos
+    1. Criar arquivo .proto 
+    2. Criar os arquivos services linkando o gRPC 
+    3. Fazer testes apropriados em todos os métodos usados na aplicação
+    4. Utilizar gRPC para fazer a exibição dos comandos
+
+
