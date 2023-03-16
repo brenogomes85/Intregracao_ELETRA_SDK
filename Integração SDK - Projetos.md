@@ -53,17 +53,23 @@ O objetivo deste projeto, além de otimizar tudo que foi feito no projeto anteri
 
 ## PROJETO 03
 
-Com esse projeto estaremos avançando mais um passo no conhecimento das tecnologias usadas no time SDK. Neste projeto, alem de aprofundar tudo que foi feito no projeto 2 e iremos implementar o uso do gRPC e vcpkg. Implementações importantes para o dia a dia dos membros do time do SDK. O objetivo do Projeto 3 é fazer um Servidor se comunicando com o BloomRPC e os métodos da aplicação serem exibidos lá. O servidor tem que disponibilizar os seguintes métodos:
+Com esse projeto estaremos avançando mais um passo no conhecimento das tecnologias usadas no time SDK. Neste projeto, alem de aprofundar tudo que foi feito no projeto 2 e iremos implementar o uso do gRPC e vcpkg. 
 
-    - Funcionalidades do Menu
+### Objetivo Final
+
+Implementações importantes para o dia a dia dos membros do time do SDK. O objetivo do Projeto 3 é fazer um Servidor se comunicando com o BloomRPC e os métodos da aplicação serem exibidos lá. O servidor tem que disponibilizar os seguintes métodos:
+
+- Funcionalidades do Menu
+
     1. Exibir as linhas disponíveis
     2. Exibir as linhas disponíveis na lista de medidores
     3. Exibir todos os medidores disponíveis na lista baseado na linha escolhida pelo usuário
     4. Exibir todos os modelos de meddidores na lista
     5. Adiconar um novo medidor na lista de medidores
     6. Excluir um medidor baseado no seu ID
+       
+- Requisitos
 
-    - Reequisitos
     1. Criar arquivo .proto 
     2. Criar os arquivos services linkando o gRPC 
     3. Fazer testes apropriados em todos os métodos usados na aplicação
