@@ -2,7 +2,7 @@
 
 Primeiramente gostaria de dar as boas vindas ao time SDK da eletra energy solutions, nesse primeiro momento vamos gastar o tempo necessário
 em projetos simples de integração para aumentar seu nível de conhecimentos básicos em C++ e P.O.O. . Abaixo temos 3 projetos para serem
-desenvolvidos pelos membros récem chegados, esses projetos devem ser feitos em sequência e só podem ser começados após o anterior ter sido aprovado por um membro sênior do time (no caso o Ronald). Bom trabalho mãos a obra e mais uma vez 
+desenvolvidos pelos membros récem chegados, esses projetos devem ser feitos em sequência e só podem ser começados após o anterior ter sido aprovado por um membro sênior do time (no caso o Ronald). Bom trabalho mãos a obra!
 
 
 ## PROJETO N°1
@@ -53,7 +53,7 @@ O objetivo deste projeto, além de otimizar tudo que foi feito no projeto anteri
 
 ## PROJETO 03
 
-Com esse projeto estaremos avançando mais um passo no conhecimento das tecnologias usadas no time SDK. Neste projeto, alem de aprofundar tudo que foi feito no projeto 2 e iremos implementar o uso do gRPC e vcpkg. 
+Com esse projeto estaremos avançando mais um passo no conhecimento das tecnologias usadas no time SDK. Neste projeto, alem de aprofundar tudo que foi feito no projeto 2 iremos implementar o uso do gRPC e vcpkg. 
 
 ### Objetivo Final
 
