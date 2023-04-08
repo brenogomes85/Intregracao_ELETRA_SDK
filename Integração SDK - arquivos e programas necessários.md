@@ -17,7 +17,7 @@ Vamos lá:
 	recomendado baixar o windows 64 bit
 3. **Visual Studio 2019**
 	Disponível em: https://visualstudio.microsoft.com/pt-br/vs/older-downloads/
-	Ao fazer a instalação instale o máximo de pacotes possível(de preferência todos com C++)
+	Ao fazer a instalação instale o máximo de pacotes possível(de preferência todos com C++). É importante frizar que o que deve ser instalado é a versão da comunidade (visual studio community) pois as versões profissional e enterprise tbm irão funcionar mas durante o build elas informam cada arquivo que é criado tornando muito díficil encontrar os erros.
 4. **Visual Studio Code**
 	Disponível em: https://code.visualstudio.com/download
 	Após a instalação se faz necessário configurar todo o ambiente para a programação em C++. Para isso é necessário instalar algumas extensões pois o VS code é um editor de texto. As extensões a serem instaladas são as seguintes: 
@@ -30,28 +30,101 @@ Vamos lá:
     - 4.6. **vscode-icons** extensão com a função estética que mostra os ícones dos arquivos que estão sendo usados, ajuda muito na organização do que está sendo usado.
     - 4.7 **vscode-proto3** extensão que tarbalha com arquivos do tipo '.proto' que são essenciais no trabalho do dia a dia do SDK.
 
+	Algumas coisas devem ser feitas no VS Code para poder usá-lo como ambiente de programação, tais como o arquivo de Debug e os settings do json para integrar o  compilador do visual studio 2019 com o VS Code
+	- primeiro o arquivo de Debug
+		Dentro da pasta do VScode crie um arquivo "launch.json" e nele cole o seguinte:
+	```
+	{
+	// Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/caminho até o executável",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/",
+            "environment": [],
+            "console": "integratedTerminal"
+        }]}
+	```
+		Na linha onde tem program é necessário colocar o caminho até o executável gerado após a compilação
+		Na linha que tem name é onde vc pode definir um nome pro Debug
+		Na linha que tem args é onde devem ser passados os argumentos, se necessário, para funcionamento do do executável. (Como por exemplo a porta do servidor)
+
+	- segundo o terminal de uso
+		O terminal que deve ser usado é o do Visual studio, para compilação. Para tanto vá em settings->features->edit in settings json. Irá abrir um arquivo do tipo json, apague o que tiver nele e insira o texto abaixo:
+	```
+		{   
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [
+                "/k", "C:\\**Caminho até o arquivo VsDevCmd.bat que deve estar dentro da pasta do visual studio**\\VsDevCmd.bat"        
+            ],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    },
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "terminal.integrated.automationProfile.linux": {
+    }
+    "workbench.colorCustomizations" : 
+    {
+        "terminal.foreground" : "#ff6600",
+        "terminal.background" : "#000000"
+    }
+
+}
+```
+	Na linha onde tem "workbench.colorCustomizations": é uma customização adicional, não é necesserária, serve para mudar a cor do fundo do terminal e a cor das letras.
+
+
 5. **Bloom gRPC**
 	Disponível em: https://github.com/bloomrpc/bloomrpc/releases
 	Instalação padrão, nesse aplicativo que serão incluídos os arquivos .proto muito utilizados para identificar se os metódos estão em funcionamento.
 
-6. **VCPKG**
+7. **Tortoise**
+	Disponível em: https://tortoisegit.org/download/
+	Instalação padrão, aplicativo  responsável por fazer a clonagem das pastas e o commit dos  arquivos para salvar no GitHub.
+
+8. **GitBash**
+	Disponível em: https://git-scm.com/download/win
+
+
+9. **VCPKG**
 	Disponível em: https://github.com/microsoft/vcpkg 
 	(Necessário já ter instalado o tortoise pois será por ele que faremos o clone da pasta)
 	Após o clone e ter rodado o projeto do vcpkg é necessário instalar as variaveis de ambiente, são elas:
 		-VCPKG_ROOT -> ${Diretório onde vcpkg foi clonado}
 
-7. **SDK**
-	
+10. **COM0COM**
+	Disponível em: https://sourceforge.net/projects/com0com/
+	Instalação padrão, após instalar crie pelo menos 1 par de portas e depois reinicie o computador, para que o computador reconheça as portas.
 
-    Configurando:
-    - Configurando o terminal do VS code:
-	Setings (Ctrl+,) -> Features -> Terminal 
-	no canto superior direito clique em "show source", irá aparecer um código do tipo json. Apague o que tiver lá e substitua pelo código no bloco de notas com o nome de "VS code Terminal"
+11. **ComByTCP**
+	Disponível em: https://sourceforge.net/projects/combytcp/
+	Instalação padrão, aplicativo serve para fazer a conecção com os medidores.
 
-	
-O código acima tem o objetivo de alterar o terminal do VS code para que ele fique execuntando o compilador do Visual studio 2019, instalado na parte de ferramentas de trabalho.
-	
-O seguinte comando deve ser usado para aplicar caracteres especiais no compilador ->chcp 65001 & cmd
+12. **AnyDesk**
+	Disponível em: https://anydesk.com/pt/downloads/windows
+	Executável padrão serve tanto para comunicação com o time quanto para facilitar a passagem de arquivos.
 
 ## Ferramentas de Equipe
 
@@ -71,8 +144,3 @@ para servir como ambiente de programação para as aplicações de C++.
 Todos os dias há os ***Dailys***, que tem o objetivo de compartilhar suas atividades para a equipe o que foi feito
 
 Quinzenalmente as terças há as ***Sprints***, que são as atividades que tem que ser desempenhadas nesse periodo passadas pela equipe.
-
-## Etapas da configuração do Ambiente de programação C++.
-
-Após terem sidos instaladas as ferramentas de trabalho siga o passo a passo abaixo para fazer a preparção de todo o ambiente de trabalho e suas configurações para que seja possivél realizar o desenvolvimento em C++ dos programas e dos testes.
-
