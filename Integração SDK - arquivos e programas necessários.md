@@ -33,8 +33,7 @@ Vamos lá:
 	Algumas coisas devem ser feitas no VS Code para poder usá-lo como ambiente de programação, tais como o arquivo de Debug e os settings do json para integrar o  compilador do visual studio 2019 com o VS Code
 	- primeiro o arquivo de Debug
 		Dentro da pasta do VScode crie um arquivo "launch.json" e nele cole o seguinte:
-	```
-	{
+	```{
 	// Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
@@ -50,16 +49,17 @@ Vamos lá:
             "cwd": "${workspaceFolder}/build/",
             "environment": [],
             "console": "integratedTerminal"
-        }]}
-	```
-		Na linha onde tem program é necessário colocar o caminho até o executável gerado após a compilação
-		Na linha que tem name é onde vc pode definir um nome pro Debug
-		Na linha que tem args é onde devem ser passados os argumentos, se necessário, para funcionamento do do executável. (Como por exemplo a porta do servidor)
+        }]
+	}```
 
-	- segundo o terminal de uso
-		O terminal que deve ser usado é o do Visual studio, para compilação. Para tanto vá em settings->features->edit in settings json. Irá abrir um arquivo do tipo json, apague o que tiver nele e insira o texto abaixo:
-	```
-		{   
+Na linha onde tem program é necessário colocar o caminho até o executável gerado após a compilação
+Na linha que tem name é onde vc pode definir um nome pro Debug
+Na linha que tem args é onde devem ser passados os argumentos, se necessário, para funcionamento do do executável. (Como por exemplo a porta do servidor)
+
+- segundo o terminal de uso
+	O terminal que deve ser usado é o do Visual studio, para compilação. Para tanto vá em settings->features->edit in settings json. Irá abrir um arquivo do tipo json, apague o que tiver nele e insira o texto abaixo:
+
+	```{   
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
@@ -90,10 +90,10 @@ Vamos lá:
         "terminal.foreground" : "#ff6600",
         "terminal.background" : "#000000"
     }
+	}
 
-}
-```
-	Na linha onde tem "workbench.colorCustomizations": é uma customização adicional, não é necesserária, serve para mudar a cor do fundo do terminal e a cor das letras.
+	
+Na linha onde tem "workbench.colorCustomizations": é uma customização adicional, não é necesserária, serve para mudar a cor do fundo do terminal e a cor das letras.
 
 
 5. **Bloom gRPC**
