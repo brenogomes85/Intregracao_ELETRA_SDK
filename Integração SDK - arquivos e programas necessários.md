@@ -52,7 +52,7 @@ Vamos lá:
             "console": "integratedTerminal"
         }]
 	}
-	}
+
 
 Na linha onde tem program é necessário colocar o caminho até o executável gerado após a compilação
 Na linha que tem name é onde vc pode definir um nome pro Debug
