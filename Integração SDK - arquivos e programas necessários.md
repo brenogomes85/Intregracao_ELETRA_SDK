@@ -33,7 +33,8 @@ Vamos lá:
 	Algumas coisas devem ser feitas no VS Code para poder usá-lo como ambiente de programação, tais como o arquivo de Debug e os settings do json para integrar o  compilador do visual studio 2019 com o VS Code
 	- primeiro o arquivo de Debug
 		Dentro da pasta do VScode crie um arquivo "launch.json" e nele cole o seguinte:
-	```{
+	```json
+	{
 	// Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
@@ -51,6 +52,7 @@ Vamos lá:
             "console": "integratedTerminal"
         }]
 	}
+	}
 
 Na linha onde tem program é necessário colocar o caminho até o executável gerado após a compilação
 Na linha que tem name é onde vc pode definir um nome pro Debug
@@ -59,7 +61,8 @@ Na linha que tem args é onde devem ser passados os argumentos, se necessário, 
 - segundo o terminal de uso
 	O terminal que deve ser usado é o do Visual studio, para compilação. Para tanto vá em settings->features->edit in settings json. Irá abrir um arquivo do tipo json, apague o que tiver nele e insira o texto abaixo:
 
-	```{   
+	```json
+	{   
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
