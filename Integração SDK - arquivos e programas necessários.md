@@ -28,7 +28,7 @@ Vamos lá:
     - 4.4. **CMake** Extensão muito importante
     - 4.5. **CMake Tools** 
     - 4.6. **vscode-icons** extensão com a função estética que mostra os ícones dos arquivos que estão sendo usados, ajuda muito na organização do que está sendo usado.
-    - 4.7 **vscode-proto3** extensão que tarbalha com arquivos do tipo '.proto' que são essenciais no trabalho do dia a dia do SDK.
+    - 4.7 **vscode-proto3** extensão que trabalha com arquivos do tipo '.proto' que são essenciais no trabalho do dia a dia do SDK.
 
 	Algumas coisas devem ser feitas no VS Code para poder usá-lo como ambiente de programação, tais como o arquivo de Debug e os settings do json para integrar o  compilador do visual studio 2019 com o VS Code
 	- primeiro o arquivo de Debug
@@ -50,7 +50,7 @@ Vamos lá:
             "environment": [],
             "console": "integratedTerminal"
         }]
-	}```
+	}
 
 Na linha onde tem program é necessário colocar o caminho até o executável gerado após a compilação
 Na linha que tem name é onde vc pode definir um nome pro Debug
@@ -79,40 +79,25 @@ Na linha que tem args é onde devem ser passados os argumentos, se necessário, 
         "Git Bash": {
             "source": "Git Bash"
         }
-    },
-    "workbench.colorTheme": "Default Dark+",
-    "workbench.iconTheme": "vscode-icons",
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "terminal.integrated.automationProfile.linux": {
     }
-    "workbench.colorCustomizations" : 
-    {
-        "terminal.foreground" : "#ff6600",
-        "terminal.background" : "#000000"
-    }
-	}
-
-	
-Na linha onde tem "workbench.colorCustomizations": é uma customização adicional, não é necesserária, serve para mudar a cor do fundo do terminal e a cor das letras.
-
 
 5. **Bloom gRPC**
 	Disponível em: https://github.com/bloomrpc/bloomrpc/releases
 	Instalação padrão, nesse aplicativo que serão incluídos os arquivos .proto muito utilizados para identificar se os metódos estão em funcionamento.
 
+8. **Git**
+	Disponível em: https://git-scm.com/download/win
+
 7. **Tortoise**
 	Disponível em: https://tortoisegit.org/download/
 	Instalação padrão, aplicativo  responsável por fazer a clonagem das pastas e o commit dos  arquivos para salvar no GitHub.
 
-8. **GitBash**
-	Disponível em: https://git-scm.com/download/win
-
-
 9. **VCPKG**
 	Disponível em: https://github.com/microsoft/vcpkg 
 	(Necessário já ter instalado o tortoise pois será por ele que faremos o clone da pasta)
-	Após o clone e ter rodado o projeto do vcpkg é necessário instalar as variaveis de ambiente, são elas:
-		-VCPKG_ROOT -> ${Diretório onde vcpkg foi clonado}
+	Após o clone e ter rodado o projeto do vcpkg é necessário instalar as variaveis de ambiente, são elas: 
+    * 9.1 VCPKG_ROOT -> ${Diretório onde vcpkg foi clonado}
+    * 9.2 também é necessário rodar -> bootstrap-vcpkg.bat localizado dentro da pasta do VCPKG
 
 10. **COM0COM**
 	Disponível em: https://sourceforge.net/projects/com0com/
@@ -122,10 +107,6 @@ Na linha onde tem "workbench.colorCustomizations": é uma customização adicion
 	Disponível em: https://sourceforge.net/projects/combytcp/
 	Instalação padrão, aplicativo serve para fazer a conecção com os medidores.
 
-12. **AnyDesk**
-	Disponível em: https://anydesk.com/pt/downloads/windows
-	Executável padrão serve tanto para comunicação com o time quanto para facilitar a passagem de arquivos.
-
 ## Ferramentas de Equipe
 
 1. **Discord**
@@ -133,12 +114,12 @@ Na linha onde tem "workbench.colorCustomizations": é uma customização adicion
 	Acesse, faça seu login e depois adicione os membros do time.
 2. **Trello**
     Algum membro sênior do time irá adicionar vc e explicar quais cartões devem ser preenchidos e como preeencher, para mais dúvidas 
+    * 2.1 É uma boa prática instalar as extensões do Trello para acompanhar a pontuação durante as sprints, a extensão usada é a 
+    **ScrumForTrello** disponível em: https://chrome.google.com/webstore/detail/scrum-for-trello/jdbcdblgjdpmfninkoogcfpnkjmndgje
 3. **Glossário**
 	Dentro do mundo da programação há uma infinidade de termos especificos para a programação, segue o link de um glossário englobando vários deles:
 	https://blog.cubos.academy/dicionario-programacao-do-zero-entenda-os-termos-da-area-de-programacao/# 	
 
-O presente arquivo tem o intuito de ensinar o passo a passo de configuração do software Visual Studio Code (VS code)
-para servir como ambiente de programação para as aplicações de C++.
 
 ## ATIVIDADES
 Todos os dias há os ***Dailys***, que tem o objetivo de compartilhar suas atividades para a equipe o que foi feito
