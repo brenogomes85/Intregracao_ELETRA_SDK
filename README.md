@@ -1,12 +1,12 @@
 ## BEM VINDO AO SDK!! 
 
-Primeiramente gostaria de dar as boas vindas ao time SDK da eletra energy solutions, nesse primeiro momento vamos gastar o tempo necessário
-em projetos simples de integração para aumentar seu nível de conhecimentos básicos em C++, P.O.O., CMake, Catch2, gRPC entre outras tecnologias. Abaixo temos 3 projetos para serem desenvolvidos pelos membros récem chegados, esses projetos devem ser feitos em sequência e só podem ser começados após o anterior ter sido aprovado por um membro sênior do time. Bom trabalho mãos a obra!
+Primeiramente gostaria de dar as boas vindas ao time SDK da Eletra Energy Solution, nesse primeiro momento vamos gastar o tempo necessário
+em projetos simples de integração para aumentar seu nível de conhecimentos básicos em C++, POO, CMake, Catch2, gRPC entre outras tecnologias. Abaixo temos 3 projetos para serem desenvolvidos pelos membros récem chegados, esses projetos devem ser feitos em sequência e só podem ser começados após o anterior ter sido aprovado por um membro sênior do time. Bom trabalho!
 
 
-## PROJETO N°1
+## PROJETO N° 1
 
-Montagem do ambiente de programação C++. Para iniciar os projetos subsequentes os novos membros devem ser capazes de montar o ambiente de programação para ter o conhecimento de como essas ferramentas funcionam e o funcionamento básico dessas ternologias. Dentro da pasta *files* desse repositório há um guia de quais softwares baixar e onde.
+Montagem do ambiente de programação C++. Para iniciar os projetos subsequentes os novos membros devem ser capazes de montar o ambiente de programação para ter o conhecimento de como essas ferramentas funcionam e o funcionamento básico dessas tecnologias. Dentro da pasta *files* desse repositório há um guia de quais softwares baixar e onde baixá-los.
 - #### Requisitos:
     1. Instalar o CMake
     2. Instalar o Visual Studio 2019 (community)
@@ -97,7 +97,7 @@ Com esse projeto estaremos avançando mais um passo no conhecimento das tecnolog
 
 ## PROJETO N°5
 
-Este projeto sai do trabalho com listas de medidores e visa introduzir os novos membros a respeito dos protocolos de comunicação dos dispositivos usados na eletra. 
+Este projeto sai do trabalho com listas de medidores e visa introduzir os novos membros a respeito dos protocolos de comunicação dos dispositivos usados na Eletra. 
 Os protocolos usados nesse projeto serão DLMS, ABNT, HXD822 e MODBUS. Como desenvolvedor backend você terá que fazer uso desses protocolos constantemente e por tanto deve conhecer eles bem, e entender como a informação está contida ou deve ser enviada ao medidor por via de frames.
 
 - #### Requisitos
